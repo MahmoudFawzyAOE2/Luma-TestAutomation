@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-22T20:23:14 EEST" name="PaymentFlowSuite" finished-at="2025-06-22T20:25:25 EEST" duration-ms="130901">
+    <groups>
+    </groups>
+    <test started-at="2025-06-22T20:23:14 EEST" name="PaymentFlowTest" finished-at="2025-06-22T20:25:25 EEST" duration-ms="130901">
+      <class name="TestSuite.PaymentFlowTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:23:14 EEST" name="setup" finished-at="2025-06-22T20:23:39 EEST" duration-ms="25042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:23:39 EEST" name="setUp" finished-at="2025-06-22T20:23:49 EEST" duration-ms="10107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="payment(int,java.util.Map,java.lang.String)[pri:1, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:23:49 EEST" name="payment" data-provider="userDataProvider" finished-at="2025-06-22T20:24:52 EEST" duration-ms="62899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{firstName=Test, lastName=User, zipCode=90001, country=Egypt, address=123 someAddress st, phoneNumber=1234567890, province=, city=Testville, email=test.user@example.com}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://magento.softwaretestingboard.com/checkout/onepage/success/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payment -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:24:52 EEST" name="setUp" finished-at="2025-06-22T20:24:54 EEST" duration-ms="1499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="payment(int,java.util.Map,java.lang.String)[pri:1, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:24:54 EEST" name="payment" data-provider="userDataProvider" finished-at="2025-06-22T20:24:57 EEST" duration-ms="3677" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{firstName=Test, lastName=User, zipCode=90001, country=Egypt, address=123 someAddress st, phoneNumber=1234567890, province=, city=Testville, email=test.user@example.com}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://magento.softwaretestingboard.com/checkout/onepage/success/]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected text to contain: "You added", but got: "The requested qty is not available" expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected text to contain: "You added", but got: "The requested qty is not available" expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at Pages.BasePage.assertTextContains(BasePage.java:86)
+at TestSuite.PaymentFlowTests.payment(PaymentFlowTests.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payment -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:24:58 EEST" name="setUp" finished-at="2025-06-22T20:24:59 EEST" duration-ms="1421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="payment(int,java.util.Map,java.lang.String)[pri:1, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:24:59 EEST" name="payment" data-provider="userDataProvider" finished-at="2025-06-22T20:25:25 EEST" duration-ms="25888" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{firstName=Test, lastName=User, zipCode=90001, country=Egypt, address=123 someAddress st, phoneNumber=1234567890, province=, city=Testville, email=test.user@example.com}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://magento.softwaretestingboard.com/checkout/#shipping/]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[URL did not match within timeout.
+Expected: "https://magento.softwaretestingboard.com/checkout/#shipping/"
+Actual:   "https://magento.softwaretestingboard.com/checkout/onepage/success/"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: URL did not match within timeout.
+Expected: "https://magento.softwaretestingboard.com/checkout/#shipping/"
+Actual:   "https://magento.softwaretestingboard.com/checkout/onepage/success/"
+at org.testng.Assert.fail(Assert.java:111)
+at Pages.BasePage.assertURLMatches(BasePage.java:96)
+at TestSuite.PaymentFlowTests.payment(PaymentFlowTests.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payment -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestContext)[pri:0, instance:TestSuite.PaymentFlowTests@35047d03]" started-at="2025-06-22T20:25:25 EEST" name="teardown" finished-at="2025-06-22T20:25:25 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@71b6d77f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestSuite.PaymentFlowTests -->
+    </test> <!-- PaymentFlowTest -->
+  </suite> <!-- PaymentFlowSuite -->
+</testng-results>
